@@ -1,0 +1,274 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        
+        <title>Inlämningsuppgift</title>
+        
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+        
+        <!--Implementerar font-biblioteket Font Awesome-->
+        <script src="https://kit.fontawesome.com/a076d05399.js"></script>
+
+        <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+        <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous"></script>
+    </head>
+
+    <body>
+        <!--Container för hela sidan-->
+        <div class="container">
+            
+            <!--Header-->
+            <div class="row">
+                <div class="col-12">
+                    <!--Navbar-->
+                    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+                        
+                        <!--Titel med bild-->
+                        <a class="navbar-brand" href="#">
+                        <img src="pics/navbarIcon.png" width="30" height="30" class="d-inline-block align-top" alt="Temporary icon for the website owner" loading="lazy">
+                        <!--Innehåller en badge som visar att den nu är en helt ny hemsida-->
+                        My First Webpage</a>
+                        <!--Ikon för responsivitet. För mobiler-->
+                        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsedTextLinks" aria-controls="collapsedTextLinks" aria-expanded="false" aria-label="Toggle navigation">
+                            <span class="navbar-toggler-icon"></span>
+                        </button>
+                        
+                        <!--Textlänkar-->
+                        <div class="collapse navbar-collapse" id="collapsedTextLinks">
+                            <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
+                                <li class="nav-item active">
+                                    <a class="nav-link" href="#">Hem <i class="fas fa-home"></i><span class="sr-only">(current)</span></a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" href="#newProblems">Nya Inlägg <i class="fas fa-eye"></i></a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" href="#infoDiv">Information <i class="fas fa-info-circle"></i></a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" href="#contactUs">Kontakta oss <i class="fas fa-phone"></i></a>
+                                </li>
+                            </ul>
+                            <!--Sökruta-->
+                            <form class="form-inline my-2 my-lg-0">
+                                <input class="form-control mr-sm-2" type="search" placeholder="Sök" aria-label="Search">
+                                <button class="btn btn-outline-success btn-outline-info my-2 my-sm-0" type="submit">Sök</button>
+                            </form>
+                        </div>
+                    </nav>
+                </div>
+            </div>
+
+            <!--Maindelen-->
+            <div class="row">
+                <!--Carouseldel-->
+                <div class="col-12">
+                    <div id="carouselPics" class="carousel slide" data-ride="carousel">
+                        <ol class="carousel-indicators">
+                            <li data-target="#carouselPics" data-slide-to="0" class="active"></li>
+                            <li data-target="#carouselPics" data-slide-to="1"></li>
+                            <li data-target="#carouselPics" data-slide-to="2"></li>
+                        </ol>
+                        <div class="carousel-inner">
+                            <div class="carousel-item active">
+                                <img src="pics/coolpic1.jpg" class="w-100" alt="Macbook showing CSS-code">
+                                <div class="carousel-caption text-info">
+                                    <h1>Koda är kul!</h1>
+                                    <p>Klicka på knappen för att veta lite mer!</p>
+                                    <!-- En infomodal dyker upp centralt när man trycker på den-->
+                                    <button type="button" class="btn btn-info btn-primary" data-toggle="modal" data-target="#triggerInfoModal">Klicka för info!</button>
+                                </div>
+                            </div>
+                            <div class="carousel-item">
+                                <img src="pics/coolpic2.jpg" class=" w-100" alt="Picture showing programming language">
+                                <div class="carousel-caption text-info">
+                                    <h1>Kodning är intressant!</h1>
+                                    <p>Klicka på knappen för att veta lite mer!</p>
+                                    <!-- En warningmodal dyker upp centralt när man trycker på den--><!-- En infomodal dyker upp centralt när man trycker på den-->
+                                    <button type="button" class="btn btn-info btn-primary" data-toggle="modal" data-target="#triggerInfoModal2">Klicka för info!</button>
+                                </div>
+                            </div>
+                            <div class="carousel-item">
+                                <img src="pics/coolpic3.jpg" class="w-100" alt="Music Studio">
+                                <div class="carousel-caption text-warning">
+                                    <h1>Sidan håller på att utvecklas!</h1>
+                                    <p>Work In Progress!</p>
+                                    <!-- En warningmodal dyker upp centralt när man trycker på den-->
+                                    <button type="button" class="btn btn-warning btn-primary" data-toggle="modal" data-target="#triggerWarningModal">Klicka är för mer info!</button>
+                                </div>
+                            </div>
+                        </div>
+                        <a class="carousel-control-prev" href="#carouselPics" role="button" data-slide="prev">
+                            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                            <span class="sr-only">Previous</span>
+                        </a>
+                        <a class="carousel-control-next" href="#carouselPics" role="button" data-slide="next">
+                            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                            <span class="sr-only">Next</span>
+                        </a>
+                    </div>
+
+                    <!--Modaldelarna till knapparna i carouseldelen-->
+                    <!--Början på infomodalen (Centrerad)-->
+                    <div class="modal fade" id="triggerInfoModal" tabindex="-1" role="dialog" aria-labelledby="triggerInfoModalTitle" aria-hidden="true">
+                        <div class="modal-dialog modal-dialog-centered" role="document">
+                            <div class="modal-content">
+                                <div class="modal-header alert alert-info" role="alert">
+                                    <h5 class="modal-title" id="triggerInfoModalLongTitle">Vad var tanken bakom denna hemsida? </h5>
+                                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                        <span aria-hidden="true">&times;</span>
+                                    </button>
+                                </div>
+                                <div class="modal-body alert alert-info" role="alert">
+                                    <p>
+                                        Detta är en liten hemsida jag gjort om kodning. Tanken var väl att kunna göra en hemsidan liknade ett forum som Stack Overflow 
+                                        där man kan lägga upp olika kodningslösningar till olika problem som användare kan ha.
+                                    </p>
+                                </div>
+                                <div class="modal-footer">
+                                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Stäng</button>
+                                    <button type="button" class="btn btn-info" data-dismiss="modal">Jag förstår!</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!--Ytterligare en infoModal-->
+                    <div class="modal fade" id="triggerInfoModal2" tabindex="-1" role="dialog" aria-labelledby="triggerInfoModal2Title" aria-hidden="true">
+                        <div class="modal-dialog modal-dialog-centered" role="document">
+                            <div class="modal-content">
+                                <div class="modal-header alert alert-info" role="alert">
+                                    <h5 class="modal-title" id="triggerInfoModal2LongTitle">Info! </h5>
+                                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                        <span aria-hidden="true">&times;</span>
+                                    </button>
+                                </div>
+                                <div class="modal-body alert alert-info" role="alert">
+                                    <p>
+                                        Denna sida kan används som ett verktyg för web designers att kunna skapa en plattform att dela med sig av
+                                        olika tips inom web design för att kunna lösa olika problem.
+                                    </p>
+                                </div>
+                                <div class="modal-footer">
+                                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Stäng</button>
+                                    <button type="button" class="btn btn-info" data-dismiss="modal">Jag förstår!</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!--Warningmodal-->
+                    <div class="modal fade" id="triggerWarningModal" tabindex="-1" role="dialog" aria-labelledby="triggerWarningModalTitle" aria-hidden="true">
+                    <div class="modal-dialog modal-dialog-centered" role="document">
+                        <div class="modal-content">
+                            <div class="modal-header alert alert-warning" role="alert">
+                                <h5 class="modal-title" id="triggerWarningModalLongTitle">Denna sida är en klar än!! </h5>
+                                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                    <span aria-hidden="true">&times;</span>
+                                </button>
+                            </div>
+                            <div class="modal-body alert alert-warning" role="alert">
+                                <p>
+                                    Denna sida är just nu inte helt funktionell än. Detta är bara ett demo just nu på hur startsidan kan se ut!
+                                </p>
+                            </div>
+                            <div class="modal-footer">
+                                <button type="button" class="btn btn-secondary" data-dismiss="modal">Stäng</button>
+                                <button type="button" class="btn btn-warning" data-dismiss="modal">Jag förstår!</button>
+                            </div>
+                        </div>
+                    </div>
+                    </div>
+                </div>
+        
+                <!--Info divar där den generella infon ska vara-->
+                <div class="row col-12 mt-3 mb-3">
+                    <!--Infodel med information om sidan.-->
+                    <div class="col-12 col-md-12 col-lg-8" id="infoDiv">
+                        <h1>Ny hemsida!</h1>
+                        <p> Denna hemsida ar skapad av Filip Almstedt och är utvecklat med bootstrap för att skapa en responsiv fin hemsida med hjälp av boostraps olika klasser. 
+                            Denna innehåller en navbar med olika länkar som tar dig till olika sektioner på hemsidan. Den består av en header med en navbar. En main-sektion som innehåller 
+                            två delar, en del med en carousel som har tre olika bilder med egen text under och lite mer info, den andra delen är indelad i en div som är indelad i två andra 
+                            divar som innehåller en del med text, den som du läser i nu, och den andra har en list group med sig. Syftet med den kan du läsa om i styket nedan. På en stor skärm som en desktop skärm 
+                            ska denna diven vara 8 kolumner bred, men blir skärmen mindre kommer den ta upp 12 kolumner istället, både på surfplattor och mobiler
+                        </p>
+                        <p>
+                            Denna sida innehåller även modalen som du kan testa med att klicka på knapparna i carousel-sektionen. Jag har även implenterat Font-Awesome biblioteket 
+                            där jag har hämtat några olika ikoner som nu används på hemsidan
+                        </p>
+                        <h3>Syftet med denna hemsida?</h3>
+                        <p> Syftet med denna hemsidan vara att utveckla en hemsida som Stack Overflow där man skulle kunna lägga upp olika typer av kod inom web design. Man skapar ett konto där 
+                            man kan logga in och lägga upp olika trådar med problem man har inom web design. Där ska man kunna skapa olika trådar och starta konversationer med varandra för att lösa dessa problem.
+                            Det är darför denna list group finns till höger. Syftet med den ät att visa upp dem senaste problemen som vissa användare kan ha och ifall man klicka på dem ska man komma till den ny sida
+                            där man kan se vad denna användaren har för problem, lägga upp kodraden som en bild så man kan visa lite enklare vad problemet ligger. Sedan ska man kunna skapa en tråd/konveration genom att 
+                            lägga till en kommentar som sedan den som skapade tråden kan svara på. 
+                        </p>
+                        <p>
+                            Dock sådana funktioner kan jag inte nu. Men denna hemsida kan agera lite som en sida jag kan utveckla ju mera saker jag lär mig.
+                        </p>
+                    </div>
+                    <!--Del med en list-group-->
+                    <div class="col-12 col-md-12 col-lg-4">
+                        <a href="#newProblems" class="list-group-item list-group-item-action active" id="newProblems">
+                            <div class="d-flex justify-content-between">
+                                <h5 class="mb-1">Kan nån JQuery?<span class="badge badge-secondary">New</span></h5>
+                                <small>3 hours ago</small>
+                            </div>
+                            <p class="mb-1">Denna list group används som den sektionen på hemsidan där nya lösningar läggs upp hemsidan</p>
+                            <small>Inlägged skapades av Filip</small>
+                        </a>
+                        <a href="#newProblems2" class="list-group-item list-group-item-action" id="newProblems2">
+                            <div class="d-flex justify-content-between">
+                                <h5 class="mb-1">Problem med JavaScript!</h5>
+                                <small class="text-muted">1 day ago</small>
+                            </div>
+                            <p class="mb-1">Denna list group används som den sektionen på hemsidan där nya lösningar läggs upp hemsidan</p>
+                            <small class="text-muted">Inlägged skapades av Filip</small>
+                        </a>
+                        <a href="#newProblems3" class="list-group-item list-group-item-action" id="newProblems3">
+                            <div class="d-flex justify-content-between">
+                                <h5 class="mb-1">Behöver hjälp med PHP</h5>
+                                <small class="text-muted">2 days ago</small>
+                            </div>
+                            <p class="mb-1">Denna list group används som den sektionen på hemsidan där nya lösningar läggs upp hemsidan</p>
+                            <small class="text-muted">Inlägged skapades av Filip</small>
+                        </a>
+                        <a href="#newProblems3" class="list-group-item list-group-item-action" id="newProblems4">
+                            <div class="d-flex justify-content-between">
+                                <h5 class="mb-1">Kan nån Databaser?</h5>
+                                <small class="text-muted">2 days ago</small>
+                            </div>
+                            <p class="mb-1">Denna list group används som den sektionen på hemsidan där nya lösningar läggs upp hemsidan</p>
+                            <small class="text-muted">Inlägged skapades av Filip</small>
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <!--Footer-->
+            <div class="row bg-dark text-white">
+                <div class="col-12">
+                    <div class="row text-center justify-content-center">
+                        <img src="pics/navbarIcon.png" width="30" height="30" class="mt-3 mb-3">
+                        <div class="col-12">
+                            © 2020 - Created By Filip
+                        </div>
+                        <!--paddning-bottom är på 4-->
+                        <div class="col-12 pb-2">
+                            <div class="row align-items-center justify-content-center">
+                                <h5 class="mt-2" id="contactUs">Kontakta oss</h5>
+                                <div class="col-12 row align-items-center justify-content-center mt-2">
+                                    <h3 class="ml-2 mr-2"><a href="#" class="fab fa-twitter-square"></a></h3>
+                                    <h3 class="ml-2 mr-2"><a href="#" class="fab fa-linkedin"></a></h3>
+                                    <h3 class="ml-2 mr-2"><a href="#" class="fab fa-instagram"></a></h3>
+                                    <h3 class="ml-2 mr-2"><a href="#" class="fab fa-facebook-square"></a></h3>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </body>
+</html>

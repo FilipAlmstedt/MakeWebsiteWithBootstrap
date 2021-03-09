@@ -1,10 +1,14 @@
-# Uppgift i HTML och CSS
+# Assignment - Make a website using Bootstrap
 ---------------------------------------------------------------
 
-Detta är en inlämningsuppgift som gjordes i kursen HTML och CSS som var den första kursen som togs inom Front-End developer.
-Denna kurs var till för att kunna lära sig grunderna inom HTML och CSS. Styling gjordes i ramverket Bootstrap och biblioteket Font Awesome för ikoner som används på sidan.
+This was the first assignment I had in the course HTML and CSS in my goal to become a Front-end developer.
+
+The assingment was to just make a website/webpage using the framework Boostrap for styling in order for us to become familiar with that frameword. To use cool and useful icons I also used the toolkit Font Awesome.
+The website displays some components and layout used in Bootstrap.
+
+The site is responsive using the grid system.
  
-Hemsidan innehåller:
+Some of the components on the site:
 - carousel
 - modals
 - list-group
@@ -12,4 +16,6 @@ Hemsidan innehåller:
 
 ---------------------------------------------------------------
 
-Fritt fram att ta en titt!
+Feel free to look using the command: `git clone` to clone the repo and see for yourself.
+
+Have fun! 

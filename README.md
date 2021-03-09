@@ -21,4 +21,4 @@ Feel free to look using the command: `git clone` to clone the repo and see for y
 Have fun! 
 
 ###### OBS! 
-Comments and text is in Swedish!!!
+Comments and plain text is in Swedish!!!

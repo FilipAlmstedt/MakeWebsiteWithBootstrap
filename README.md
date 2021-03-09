@@ -19,3 +19,6 @@ Some of the components on the site:
 Feel free to look using the command: `git clone` to clone the repo and see for yourself.
 
 Have fun! 
+
+###### OBS! 
+Comments and text is in Swedish!!!
